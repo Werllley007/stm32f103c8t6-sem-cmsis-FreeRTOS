@@ -113,6 +113,7 @@ extern uint32_t SystemCoreClock;
 #define configUSE_MINI_LIST_ITEM                   	1
 #define configUSE_MUTEXES							0
 #define configCHECK_FOR_STACK_OVERFLOW				0
+#define configCHECK_HANDLER_INSTALLATION			1
 
 #define configSTACK_DEPTH_TYPE                     	size_t
 #define configMESSAGE_BUFFER_LENGTH_TYPE           	size_t
@@ -121,8 +122,6 @@ extern uint32_t SystemCoreClock;
 
 #define configUSE_EVENT_GROUPS    					1
 #define configUSE_STREAM_BUFFERS    				1
-
-
 
 /* Co-routine definitions. */
 #define configUSE_CO_ROUTINES                    	0
@@ -188,8 +187,9 @@ header file. */
 
 /* Definitions that map the FreeRTOS port interrupt handlers to their CMSIS
 standard names. */
-#define vPortSVCHandler    SVC_Handler
-#define xPortPendSVHandler PendSV_Handler
+#define vPortSVCHandler    							SVC_Handler
+#define xPortPendSVHandler 							PendSV_Handler
+#define xPortSysTickHandler							SysTick_Handler
 
 /* IMPORTANT: After 10.3.1 update, Systick_Handler comes from NVIC (if SYS timebase = systick), otherwise from cmsis_os2.c */
 

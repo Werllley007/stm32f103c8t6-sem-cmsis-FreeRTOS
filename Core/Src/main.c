@@ -57,7 +57,7 @@ static void MX_GPIO_Init(void);
 /* USER CODE BEGIN 0 */
 void MyTask(void *pvParams){
 	while(1){
-		cnt++;
+		cnt++;//contador
 	}
 }
 /* USER CODE END 0 */
